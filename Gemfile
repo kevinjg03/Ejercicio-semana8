@@ -62,6 +62,6 @@ gem "react_on_rails", "= 14.0.4"
 
 gem "tailwindcss-ruby", "~> 4.1"
 
-gem "tailwindcss-rails", "~> 4.2"
+gem "tailwindcss-rails", "~> 4.3"
 
 gem "devise", "~> 4.9"

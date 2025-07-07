@@ -13,3 +13,35 @@
 //
 // const images = require.context('./images', true)
 // const imagePath = (name) => images(name, true)
+import ReactOnRails from 'react-on-rails';
+import { start } from '@hotwired/turbo';
+
+import { PostsIndex } from '../components/posts/posts-index';
+import { PostShow } from '../components/posts/post-show';
+import { PostForm } from '../components/posts/post-form';
+import { AboutPage } from '../components/about/about-page';
+import { ContactPage } from '../components/contact/contact-page';
+import { SignupPage } from '../components/users/signup';
+import { LoginPage } from '../components/users/login';
+import { EditUserPage } from '../components/users/edit-user';
+
+// Inicializar Turbo
+start();
+
+// Configurar React on Rails con Turbo
+ReactOnRails.setOptions({ 
+  turbo: true,
+  traceTurbolinks: process.env.TRACE_TURBOLINKS
+});
+
+// Registrar componentes
+ReactOnRails.register({
+  PostsIndex,
+  PostShow,
+  PostForm,
+  AboutPage,
+  ContactPage,
+  SignupPage,
+  LoginPage,
+  EditUserPage,
+});

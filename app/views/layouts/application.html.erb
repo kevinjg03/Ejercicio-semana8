@@ -18,13 +18,11 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app %>
-    <%= javascript_pack_tag "application" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track' => 'reload' %>
+    <%= javascript_pack_tag "application", 'data-turbo-track' => 'reload' %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="container w-full mx-auto px-5 flex flex-col gap-4">
       <%= yield %>
-    </main>
   </body>
 </html>
